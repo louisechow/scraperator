@@ -5,31 +5,47 @@ This is a simple tool to scrape data off a Sainsbury search result page.
 Give it a Sainsbury search result webpage and it will return to you the following details:
 
 * A list of products with the following details:
-** title
-** size (of accompanying image)
-** unit price
-** description
+  * title
+  * size (of accompanying image)
+  * unit price
+  * description
 * The total unit price for all the products on the page
+
+Pre-requisites
+--------------
+Please make sure you have the following tools installed:
+- Python 3
+- Pip
+- VirtualEnv
+
 
 Installation
 ------------
-Scraperator uses Python3. Please install Python3 if you do not have it already
+1. Get the scraperator project from Github
+```
+git clone https://github.com/louisechow/scraperator.git
+```
 
-It is recommended that you set up an seperate environment to run scraperator. You can do this by creating a new virtualenv
-environment
+2. Create a separate environment to run scraperator. If you are using virtualenv, you can do this by running the
+following commands:
 
 ```
 virtualenv --python python3 env
 source env/bin/activate
+
 ```
 
 Once you have your virtual environment set up and you have retrieved the source from github you can install the dependencies
-using the following commands
+by running the following command from the root directory of the project.
 
 ```
-cd scraperator
 pip install -r requirements.txt
 ```
+
+This should install the following dependencies:
+- BeautifulSoup - Library for parsing HTML
+- requests - Library for HTTP
+- nose - Library for running tests
 
 Running tests
 -------------
@@ -45,5 +61,5 @@ From the root directory of the project you can run scraperator using the followi
 python scraperator.py
 ```
 
-
-
+Enjoy!
+------
